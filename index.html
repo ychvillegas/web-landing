@@ -1,0 +1,1144 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valdez & Asociados | Estudio Jurídico & Asesores Legales</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            800: '#1e293b',
+                            900: '#0f172a',
+                            950: '#080d1a',
+                        },
+                        gold: {
+                            400: '#fbbf24',
+                            500: '#d97706',
+                            600: '#b45309',
+                            700: '#92400e',
+                            custom: '#cb9b51',
+                            customHover: '#b8883f'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #0f172a;
+            color: #f8fafc;
+        }
+        h1, h2, h3, h4, .font-heading {
+            font-family: 'Playfair Display', serif;
+        }
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #fef08a 0%, #cb9b51 50%, #92400e 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gold-bg-gradient {
+            background: linear-gradient(135deg, #d97706 0%, #cb9b51 50%, #b45309 100%);
+        }
+        .card-glass {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(203, 155, 81, 0.15);
+        }
+        .card-glass-hover:hover {
+            border-color: rgba(203, 155, 81, 0.4);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px -10px rgba(203, 155, 81, 0.15);
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0f172a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #334155;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #cb9b51;
+        }
+    </style>
+</head>
+<body class="antialiased overflow-x-hidden selection:bg-gold-500 selection:text-white">
+
+    <!-- TOP ANNOUNCEMENT / BAR -->
+    <div class="bg-navy-950 border-b border-slate-800 text-xs py-2 px-4 text-slate-400 hidden sm:block">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-6">
+                <span><i class="fa-solid me-2 text-gold-custom fa-clock"></i>Lun - Vie: 8:00 AM - 7:00 PM | Atención Emergencias 24/7</span>
+                <span><i class="fa-solid me-2 text-gold-custom fa-location-dot"></i>Av. Principal 1245, Piso 12, Lima / Ciudad</span>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="tel:+51987654321" class="hover:text-gold-custom transition-colors"><i class="fa-solid fa-phone me-1 text-gold-custom"></i> +51 (01) 456-7890</a>
+                <span class="text-slate-600">|</span>
+                <a href="#contacto" class="hover:text-gold-custom transition-colors"><i class="fa-solid fa-envelope me-1 text-gold-custom"></i> contacto@valdezabogados.com</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="sticky top-0 z-40 bg-navy-900/90 backdrop-blur-md border-b border-slate-800/80 transition-all duration-300" id="main-header">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- LOGO -->
+                <a href="#" class="flex items-center space-x-3 group">
+                    <div class="w-10 h-10 rounded border border-gold-custom/40 flex items-center justify-center bg-navy-800 text-gold-custom group-hover:border-gold-custom transition-colors shadow-lg">
+                        <i class="fa-solid fa-scale-balanced text-xl"></i>
+                    </div>
+                    <div>
+                        <span class="font-serif text-2xl font-bold tracking-tight text-white block leading-none">VALDEZ <span class="text-gold-custom">&</span> ASOCIADOS</span>
+                        <span class="text-[10px] uppercase tracking-widest text-slate-400 font-semibold mt-1 block">Estudio Jurídico & Consultoría</span>
+                    </div>
+                </a>
+
+                <!-- DESKTOP NAV -->
+                <nav class="hidden lg:flex items-center space-x-8 text-sm font-medium">
+                    <a href="#inicio" class="text-white hover:text-gold-custom transition-colors">Inicio</a>
+                    <a href="#nosotros" class="text-slate-300 hover:text-gold-custom transition-colors">Nosotros</a>
+                    <a href="#servicios" class="text-slate-300 hover:text-gold-custom transition-colors">Áreas de Práctica</a>
+                    <a href="#cotizador" class="text-slate-300 hover:text-gold-custom transition-colors">Calculadora</a>
+                    <a href="#equipo" class="text-slate-300 hover:text-gold-custom transition-colors">Abogados</a>
+                    <a href="#testimonios" class="text-slate-300 hover:text-gold-custom transition-colors">Testimonios</a>
+                    <a href="#contacto" class="text-slate-300 hover:text-gold-custom transition-colors">Contacto</a>
+                </nav>
+
+                <!-- HEADER CTA -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="tel:+51987654321" class="text-slate-300 hover:text-white flex items-center text-sm font-semibold pr-2">
+                        <div class="w-8 h-8 rounded-full bg-gold-custom/10 flex items-center justify-center text-gold-custom mr-2">
+                            <i class="fa-solid fa-phone text-xs"></i>
+                        </div>
+                        <span class="hidden xl:inline">+51 987 654 321</span>
+                    </a>
+                    <a href="#contacto" class="gold-bg-gradient text-navy-950 font-bold px-5 py-2.5 rounded-lg shadow-lg shadow-gold-600/20 hover:opacity-95 transition-all text-sm flex items-center">
+                        <i class="fa-regular fa-calendar-check mr-2"></i> Agendar Cita
+                    </a>
+                </div>
+
+                <!-- MOBILE MENU BUTTON -->
+                <button id="mobile-menu-btn" class="lg:hidden text-slate-300 hover:text-white focus:outline-none p-2">
+                    <i class="fa-solid fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- MOBILE NAV DROPDOWN -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-navy-900 border-b border-slate-800 px-4 pt-2 pb-6 space-y-3">
+            <a href="#inicio" class="mobile-link block text-white font-medium py-2 border-b border-slate-800/50">Inicio</a>
+            <a href="#nosotros" class="mobile-link block text-slate-300 hover:text-gold-custom font-medium py-2 border-b border-slate-800/50">Nosotros</a>
+            <a href="#servicios" class="mobile-link block text-slate-300 hover:text-gold-custom font-medium py-2 border-b border-slate-800/50">Áreas de Práctica</a>
+            <a href="#cotizador" class="mobile-link block text-slate-300 hover:text-gold-custom font-medium py-2 border-b border-slate-800/50">Calculadora de Honorarios</a>
+            <a href="#equipo" class="mobile-link block text-slate-300 hover:text-gold-custom font-medium py-2 border-b border-slate-800/50">Abogados</a>
+            <a href="#testimonios" class="mobile-link block text-slate-300 hover:text-gold-custom font-medium py-2 border-b border-slate-800/50">Testimonios</a>
+            <a href="#contacto" class="mobile-link block text-slate-300 hover:text-gold-custom font-medium py-2">Contacto</a>
+            <div class="pt-2 flex flex-col space-y-3">
+                <a href="tel:+51987654321" class="text-center text-slate-200 py-2 bg-navy-800 rounded-lg font-semibold"><i class="fa-solid fa-phone text-gold-custom me-2"></i>+51 987 654 321</a>
+                <a href="#contacto" class="mobile-link text-center gold-bg-gradient text-navy-950 font-bold py-2.5 rounded-lg">Agendar Consulta Gratuita</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="inicio" class="relative min-h-[90vh] flex items-center justify-center pt-12 pb-20 overflow-hidden">
+        <!-- Background Overlay & Image -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop" alt="Edificio Jurídico" class="w-full h-full object-cover object-center opacity-20 filter grayscale">
+            <div class="absolute inset-0 bg-gradient-to-t from-navy-900 via-navy-900/80 to-navy-900/60"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center lg:text-left">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-flex items-center space-x-2 bg-slate-800/80 border border-gold-custom/30 rounded-full px-4 py-1.5 text-xs text-gold-400">
+                        <span class="w-2 h-2 rounded-full bg-gold-500 animate-pulse"></span>
+                        <span class="font-semibold tracking-wide uppercase">Estudio Jurídico de Liderazgo Estratégico</span>
+                    </div>
+
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-tight">
+                        Defendemos tus derechos con <span class="gold-gradient-text italic">excelencia, rigor</span> y compromiso legal.
+                    </h1>
+
+                    <p class="text-slate-300 text-base sm:text-lg max-w-2xl leading-relaxed font-light">
+                        Ofrecemos soluciones jurídicas integrales para personas y empresas. Representación de alto nivel respaldada por más de 15 años de victorias y sólida reputación legal.
+                    </p>
+
+                    <!-- CTAs -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                        <a href="#contacto" class="w-full sm:w-auto text-center gold-bg-gradient text-navy-950 font-bold px-8 py-4 rounded-xl shadow-xl shadow-gold-500/10 hover:shadow-gold-500/25 hover:scale-[1.02] transition-all duration-200">
+                            Solicitar Asesoría Gratuita <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                        </a>
+                        <a href="#servicios" class="w-full sm:w-auto text-center bg-navy-800/80 hover:bg-navy-800 text-white font-semibold px-8 py-4 rounded-xl border border-slate-700 hover:border-gold-custom/50 transition-all duration-200">
+                            Ver Áreas de Práctica
+                        </a>
+                    </div>
+
+                    <!-- Small Badges -->
+                    <div class="pt-6 border-t border-slate-800/80 grid grid-cols-2 sm:grid-cols-3 gap-4 text-xs text-slate-400">
+                        <div class="flex items-center space-x-2">
+                            <i class="fa-solid fa-shield-halved text-gold-custom text-base"></i>
+                            <span>Confidencialidad Absoluta</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <i class="fa-solid fa-gavel text-gold-custom text-base"></i>
+                            <span>Atención Especializada</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <i class="fa-solid fa-user-check text-gold-custom text-base"></i>
+                            <span>Primera Consulta Sin Costo</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Floating Card / Quick Banner -->
+                <div class="lg:col-span-5">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        <div class="absolute -inset-1 rounded-2xl bg-gradient-to-r from-gold-600/30 to-slate-700/30 blur-xl opacity-70"></div>
+                        <div class="relative card-glass p-8 rounded-2xl border border-gold-custom/20 space-y-6">
+                            <div class="flex items-center justify-between border-b border-slate-800 pb-4">
+                                <div>
+                                    <h3 class="text-xl font-bold text-white font-heading">Evaluación de Caso Urgente</h3>
+                                    <p class="text-xs text-slate-400">Respuesta directa de nuestro equipo en &lt; 2 horas</p>
+                                </div>
+                                <span class="bg-red-500/10 text-red-400 text-xs px-2.5 py-1 rounded-full border border-red-500/20 font-medium animate-pulse">En Línea</span>
+                            </div>
+
+                            <form id="hero-quick-form" onsubmit="event.preventDefault(); showToast('¡Mensaje enviado con éxito! Un especialista te contactará en breve.');" class="space-y-4">
+                                <div>
+                                    <label class="block text-xs font-semibold uppercase text-slate-400 mb-1">Nombre Completo</label>
+                                    <input type="text" required placeholder="Ej. Carlos Mendoza" class="w-full bg-navy-900 border border-slate-700 rounded-lg px-4 py-2.5 text-sm text-white focus:outline-none focus:border-gold-custom transition-colors">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold uppercase text-slate-400 mb-1">Teléfono / WhatsApp</label>
+                                    <input type="tel" required placeholder="+51 900 000 000" class="w-full bg-navy-900 border border-slate-700 rounded-lg px-4 py-2.5 text-sm text-white focus:outline-none focus:border-gold-custom transition-colors">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold uppercase text-slate-400 mb-1">Tipo de Legalidad</label>
+                                    <select class="w-full bg-navy-900 border border-slate-700 rounded-lg px-4 py-2.5 text-sm text-white focus:outline-none focus:border-gold-custom transition-colors">
+                                        <option>Derecho Penal</option>
+                                        <option>Derecho Civil & Propiedades</option>
+                                        <option>Derecho Laboral</option>
+                                        <option>Derecho de Familia / Divorcios</option>
+                                        <option>Derecho Corporativo</option>
+                                        <option>Otro caso</option>
+                                    </select>
+                                </div>
+                                <button type="submit" class="w-full gold-bg-gradient text-navy-950 font-bold py-3 rounded-lg shadow-lg hover:opacity-90 transition-opacity text-sm">
+                                    Enviar para Diagnóstico Inmediato
+                                </button>
+                            </form>
+                            <p class="text-[11px] text-center text-slate-500">Tus datos están protegidos bajo secreto profesional de abogado.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- COUNTER / STATS BAR -->
+    <section class="bg-navy-950 py-12 border-y border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="space-y-1">
+                    <p class="text-3xl sm:text-4xl font-bold font-heading text-gold-custom">+15</p>
+                    <p class="text-xs sm:text-sm text-slate-400 uppercase tracking-wider">Años de Experiencia</p>
+                </div>
+                <div class="space-y-1">
+                    <p class="text-3xl sm:text-4xl font-bold font-heading text-gold-custom">+2,500</p>
+                    <p class="text-xs sm:text-sm text-slate-400 uppercase tracking-wider">Casos Resueltos</p>
+                </div>
+                <div class="space-y-1">
+                    <p class="text-3xl sm:text-4xl font-bold font-heading text-gold-custom">98%</p>
+                    <p class="text-xs sm:text-sm text-slate-400 uppercase tracking-wider">Tasa de Éxito</p>
+                </div>
+                <div class="space-y-1">
+                    <p class="text-3xl sm:text-4xl font-bold font-heading text-gold-custom">24/7</p>
+                    <p class="text-xs sm:text-sm text-slate-400 uppercase tracking-wider">Soporte y Respuestas</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NOSOTROS / PROPUSTA DE VALOR -->
+    <section id="nosotros" class="py-24 bg-navy-900 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-6 relative">
+                    <div class="relative z-10 rounded-2xl overflow-hidden border border-gold-custom/20 shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=2070&auto=format&fit=crop" alt="Bufete de abogados" class="w-full h-auto object-cover">
+                    </div>
+                    <!-- Decorative Badge -->
+                    <div class="absolute -bottom-6 -right-6 z-20 bg-navy-800 border border-gold-custom p-6 rounded-xl shadow-2xl hidden sm:block max-w-xs">
+                        <div class="flex items-center space-x-3">
+                            <i class="fa-solid fa-award text-3xl text-gold-custom"></i>
+                            <div>
+                                <h4 class="font-bold text-white text-sm">Reconocimiento Nacional</h4>
+                                <p class="text-xs text-slate-400">Premiados por excelencia en Litigios y Estrategia Jurídica 2024</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-6 space-y-6">
+                    <div class="text-gold-custom font-semibold text-sm uppercase tracking-widest">Sobre Nuestro Bufete</div>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-white font-heading leading-tight">
+                        Compromiso inquebrantable con la justicia y los resultados de nuestros clientes.
+                    </h2>
+                    <p class="text-slate-300 leading-relaxed text-sm sm:text-base">
+                        En **Valdez & Asociados** entendemos que tras cada expediente hay proyectos de vida, libertades, patrimonios y familias. Fundado con la convicción de ofrecer un patrocinio legal de la más alta sofisticación, combinamos el conocimiento profundo de la doctrina con tácticas modernas de negociación y litigio.
+                    </p>
+
+                    <!-- Features List -->
+                    <div class="grid sm:grid-cols-2 gap-6 pt-4">
+                        <div class="flex items-start space-x-3">
+                            <div class="w-10 h-10 rounded-lg bg-gold-custom/10 border border-gold-custom/30 flex items-center justify-center text-gold-custom shrink-0">
+                                <i class="fa-solid fa-user-shield"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-sm">Atención Personalizada</h4>
+                                <p class="text-xs text-slate-400 mt-1">Un socio senior supervisa directamente tu caso de principio a fin.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-3">
+                            <div class="w-10 h-10 rounded-lg bg-gold-custom/10 border border-gold-custom/30 flex items-center justify-center text-gold-custom shrink-0">
+                                <i class="fa-solid fa-file-invoice-dollar"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-sm">Transparencia Total</h4>
+                                <p class="text-xs text-slate-400 mt-1">Honorarios claros y acordados previamente. Sin tarifas ocultas.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-3">
+                            <div class="w-10 h-10 rounded-lg bg-gold-custom/10 border border-gold-custom/30 flex items-center justify-center text-gold-custom shrink-0">
+                                <i class="fa-solid fa-bolt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-sm">Rapidez y Eficiencia</h4>
+                                <p class="text-xs text-slate-400 mt-1">Agilidad en trámites para mitigar riesgos e incertidumbre.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-3">
+                            <div class="w-10 h-10 rounded-lg bg-gold-custom/10 border border-gold-custom/30 flex items-center justify-center text-gold-custom shrink-0">
+                                <i class="fa-solid fa-scale-balanced"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-sm">Ética e Integridad</h4>
+                                <p class="text-xs text-slate-400 mt-1">Rigor ético absoluto en todas nuestras actuaciones procesales.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ÁREAS DE PRÁCTICA / SERVICIOS -->
+    <section id="servicios" class="py-24 bg-navy-950 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="text-gold-custom font-semibold text-sm uppercase tracking-widest">Nuestra Especialización</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-white font-heading">Áreas de Práctica Legal</h2>
+                <p class="text-slate-400 text-sm sm:text-base">Ofrecemos cobertura legal multidisciplinaria con departamentos altamente especializados para resolver los problemas jurídicos más complejos.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="services-grid">
+                <!-- Tarjeta 1: Penal -->
+                <div class="card-glass p-8 rounded-2xl border border-slate-800 card-glass-hover transition-all duration-300 flex flex-col justify-between group cursor-pointer" onclick="openServiceModal('penal')">
+                    <div>
+                        <div class="w-14 h-14 rounded-xl bg-gold-custom/10 border border-gold-custom/30 flex items-center justify-center text-gold-custom text-2xl mb-6 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-gavel"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white font-heading mb-3 group-hover:text-gold-custom transition-colors">Derecho Penal</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6">Defensa técnica preventiva y procesal. Representación en delitos económicos, corrupción, querellas y libertad personal.</p>
+                    </div>
+                    <div class="flex items-center text-gold-custom font-semibold text-sm group-hover:translate-x-2 transition-transform">
+                        <span>Ver detalles y cobertura</span>
+                        <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 2: Civil & Comercial -->
+                <div class="card-glass p-8 rounded-2xl border border-slate-800 card-glass-hover transition-all duration-300 flex flex-col justify-between group cursor-pointer" onclick="openServiceModal('civil')">
+                    <div>
+                        <div class="w-14 h-14 rounded-xl bg-gold-custom/10 border border-gold-custom/30 flex items-center justify-center text-gold-custom text-2xl mb-6 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-file-contract"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white font-heading mb-3 group-hover:text-gold-custom transition-colors">Derecho Civil y Comercial</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6">Asesoría contractual, saneamiento de propiedades, juicios ejecutivos, demandas por daños y sucesiones testamentarias.</p>
+                    </div>
+                    <div class="flex items-center text-gold-custom font-semibold text-sm group-hover:translate-x-2 transition-transform">
+                        <span>Ver detalles y cobertura</span>
+                        <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 3: Laboral -->
+                <div class="card-glass p-8 rounded-2xl border border-slate-800 card-glass-hover transition-all duration-300 flex flex-col justify-between group cursor-pointer" onclick="openServiceModal('laboral')">
+                    <div>
+                        <div class="w-14 h-14 rounded-xl bg-gold-custom/10 border border-gold-custom/30 flex items-center justify-center text-gold-custom text-2xl mb-6 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-briefcase"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white font-heading mb-3 group-hover:text-gold-custom transition-colors">Derecho Laboral</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6">Defensa de trabajadores y empleadores en despidos intempestivos, indemnizaciones, inspecciones SUNAFIL y sindicatos.</p>
+                    </div>
+                    <div class="flex items-center text-gold-custom font-semibold text-sm group-hover:translate-x-2 transition-transform">
+                        <span>Ver detalles y cobertura</span>
+                        <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 4: Familia -->
+                <div class="card-glass p-8 rounded-2xl border border-slate-800 card-glass-hover transition-all duration-300 flex flex-col justify-between group cursor-pointer" onclick="openServiceModal('familia')">
+                    <div>
+                        <div class="w-14 h-14 rounded-xl bg-gold-custom/10 border border-gold-custom/30 flex items-center justify-center text-gold-custom text-2xl mb-6 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-people-roof"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white font-heading mb-3 group-hover:text-gold-custom transition-colors">Derecho de Familia</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6">Tratamiento humano y legal en divorcios mutuo acuerdo o contenciosos, régimen de visitas, pensión alimenticia y tenencia.</p>
+                    </div>
+                    <div class="flex items-center text-gold-custom font-semibold text-sm group-hover:translate-x-2 transition-transform">
+                        <span>Ver detalles y cobertura</span>
+                        <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 5: Corporativo -->
+                <div class="card-glass p-8 rounded-2xl border border-slate-800 card-glass-hover transition-all duration-300 flex flex-col justify-between group cursor-pointer" onclick="openServiceModal('corporativo')">
+                    <div>
+                        <div class="w-14 h-14 rounded-xl bg-gold-custom/10 border border-gold-custom/30 flex items-center justify-center text-gold-custom text-2xl mb-6 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-building-shield"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white font-heading mb-3 group-hover:text-gold-custom transition-colors">Derecho Corporativo & Empresa</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6">Constitución de sociedades, fusiones y adquisiciones, gobierno corporativo, compliance preventivo y auditorías.</p>
+                    </div>
+                    <div class="flex items-center text-gold-custom font-semibold text-sm group-hover:translate-x-2 transition-transform">
+                        <span>Ver detalles y cobertura</span>
+                        <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 6: Tributario / Fiscal -->
+                <div class="card-glass p-8 rounded-2xl border border-slate-800 card-glass-hover transition-all duration-300 flex flex-col justify-between group cursor-pointer" onclick="openServiceModal('tributario')">
+                    <div>
+                        <div class="w-14 h-14 rounded-xl bg-gold-custom/10 border border-gold-custom/30 flex items-center justify-center text-gold-custom text-2xl mb-6 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-receipt"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white font-heading mb-3 group-hover:text-gold-custom transition-colors">Asesoría Fiscal y Tributaria</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6">Planificación tributaria legal, defensa ante acotaciones fiscalizadoras de administración tributaria y reclamos.</p>
+                    </div>
+                    <div class="flex items-center text-gold-custom font-semibold text-sm group-hover:translate-x-2 transition-transform">
+                        <span>Ver detalles y cobertura</span>
+                        <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CALCULADORA / COTIZADOR INTERACTIVO DE HONORARIOS -->
+    <section id="cotizador" class="py-24 bg-navy-900 border-t border-slate-800 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-5 space-y-6">
+                    <span class="text-gold-custom font-semibold text-sm uppercase tracking-widest">Estimación Transparente</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-white font-heading">Calculadora de Honorarios Estimada</h2>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Creemos en la transparencia desde el primer instante. Utiliza nuestra herramienta interactiva para obtener un presupuesto referencial aproximado según el tipo y complejidad de tu requerimiento legal.
+                    </p>
+                    
+                    <div class="space-y-4 bg-navy-950 p-6 rounded-xl border border-slate-800 text-xs text-slate-400">
+                        <div class="flex items-center space-x-3">
+                            <i class="fa-solid fa-circle-info text-gold-custom text-base"></i>
+                            <span>Los montos son estimaciones basales de referencia en dólares (USD).</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fa-solid fa-handshake text-gold-custom text-base"></i>
+                            <span>Ofrecemos planes de pago flexibles e hitos procesales según el caso.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7">
+                    <div class="card-glass p-8 rounded-2xl border border-gold-custom/20 shadow-2xl">
+                        <form id="calculator-form" class="space-y-6">
+                            
+                            <!-- Paso 1: Especialidad -->
+                            <div>
+                                <label class="block text-sm font-semibold text-slate-300 mb-2">1. Selecciona el Área Legal</label>
+                                <select id="calc-area" onchange="calculateFee()" class="w-full bg-navy-950 border border-slate-700 rounded-lg p-3 text-white text-sm focus:border-gold-custom focus:outline-none">
+                                    <option value="400">Derecho Civil / Contratos / Propiedades</option>
+                                    <option value="600">Derecho Penal (Patrocinio o Querellas)</option>
+                                    <option value="350">Derecho Laboral & Reclamaciones</option>
+                                    <option value="300">Derecho de Familia & Divorcios</option>
+                                    <option value="700">Derecho Corporativo / Constitución & Empresa</option>
+                                    <option value="500">Asesoría Tributaria / Fiscal</option>
+                                </select>
+                            </div>
+
+                            <!-- Paso 2: Complejidad -->
+                            <div>
+                                <label class="block text-sm font-semibold text-slate-300 mb-2">2. Complejidad / Etapa Procesal</label>
+                                <div class="grid grid-cols-3 gap-3">
+                                    <label class="cursor-pointer">
+                                        <input type="radio" name="complexity" value="1" checked onchange="calculateFee()" class="peer hidden">
+                                        <div class="p-3 text-center rounded-lg border border-slate-700 bg-navy-950 peer-checked:border-gold-custom peer-checked:bg-gold-custom/10 peer-checked:text-gold-custom text-xs font-semibold text-slate-300 transition-all">
+                                            Asesoría / Trámite Directo
+                                        </div>
+                                    </label>
+                                    <label class="cursor-pointer">
+                                        <input type="radio" name="complexity" value="1.5" onchange="calculateFee()" class="peer hidden">
+                                        <div class="p-3 text-center rounded-lg border border-slate-700 bg-navy-950 peer-checked:border-gold-custom peer-checked:bg-gold-custom/10 peer-checked:text-gold-custom text-xs font-semibold text-slate-300 transition-all">
+                                            Proceso Judicial Estándar
+                                        </div>
+                                    </label>
+                                    <label class="cursor-pointer">
+                                        <input type="radio" name="complexity" value="2.2" onchange="calculateFee()" class="peer hidden">
+                                        <div class="p-3 text-center rounded-lg border border-slate-700 bg-navy-950 peer-checked:border-gold-custom peer-checked:bg-gold-custom/10 peer-checked:text-gold-custom text-xs font-semibold text-slate-300 transition-all">
+                                            Alta Complejidad / Litigio
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Paso 3: Urgencia -->
+                            <div>
+                                <label class="block text-sm font-semibold text-slate-300 mb-2">3. Nivel de Urgencia</label>
+                                <select id="calc-urgency" onchange="calculateFee()" class="w-full bg-navy-950 border border-slate-700 rounded-lg p-3 text-white text-sm focus:border-gold-custom focus:outline-none">
+                                    <option value="1">Atención Ordinaria (Respuesta en 24-48h)</option>
+                                    <option value="1.25">Urgencia Prioritaria (Atención en 12h)</option>
+                                    <option value="1.5">Emergencia Inmediata / Detención 24/7</option>
+                                </select>
+                            </div>
+
+                            <!-- Resultado Estimado -->
+                            <div class="bg-navy-950 p-6 rounded-xl border border-gold-custom/30 text-center space-y-2">
+                                <span class="text-xs uppercase tracking-widest text-slate-400 font-medium">Honorario Estimado Desde</span>
+                                <div class="text-4xl font-bold font-heading text-gold-custom" id="calculated-price">$400 USD</div>
+                                <p class="text-xs text-slate-400">*Incluye análisis preliminar de expediente y primera estrategia jurídica.</p>
+                            </div>
+
+                            <a href="#contacto" onclick="prefillContactForm()" class="block text-center w-full gold-bg-gradient text-navy-950 font-bold py-3.5 rounded-lg shadow-lg hover:opacity-90 transition-opacity text-sm">
+                                Solicitar Presupuesto Oficial con esta Configuración
+                            </a>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- EQUIPO DE ABOGADOS / SOCIOS -->
+    <section id="equipo" class="py-24 bg-navy-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="text-gold-custom font-semibold text-sm uppercase tracking-widest">Nuestros Abogados</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-white font-heading">Socios y Especialistas Principales</h2>
+                <p class="text-slate-400 text-sm sm:text-base">Un equipo multidisciplinario egresado de las mejores facultades de derecho con amplia trayectoria procesal.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Abogado 1 -->
+                <div class="card-glass rounded-2xl overflow-hidden border border-slate-800 group">
+                    <div class="h-80 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=800&auto=format&fit=crop" alt="Dr. Alejandro Valdez" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-navy-900 via-transparent to-transparent opacity-80"></div>
+                    </div>
+                    <div class="p-6 space-y-3 relative">
+                        <span class="text-xs text-gold-custom font-semibold uppercase tracking-wider">Socio Fundador</span>
+                        <h3 class="text-xl font-bold text-white font-heading">Dr. Alejandro Valdez</h3>
+                        <p class="text-xs text-slate-400">Especialista en Derecho Penal y Litigios de Alta Complejidad. 18+ años de práctica legal.</p>
+                        <div class="pt-4 border-t border-slate-800/80 flex items-center justify-between text-slate-400 text-sm">
+                            <span class="text-xs text-slate-400"><i class="fa-solid fa-graduation-cap text-gold-custom me-1"></i> LL.M. Master en Penal</span>
+                            <div class="flex space-x-3">
+                                <a href="#" class="hover:text-gold-custom"><i class="fa-brands fa-linkedin"></i></a>
+                                <a href="#contacto" class="hover:text-gold-custom"><i class="fa-solid fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Abogado 2 -->
+                <div class="card-glass rounded-2xl overflow-hidden border border-slate-800 group">
+                    <div class="h-80 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&auto=format&fit=crop" alt="Dra. Elena Rossi" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-navy-900 via-transparent to-transparent opacity-80"></div>
+                    </div>
+                    <div class="p-6 space-y-3 relative">
+                        <span class="text-xs text-gold-custom font-semibold uppercase tracking-wider">Socia Principal</span>
+                        <h3 class="text-xl font-bold text-white font-heading">Dra. Elena Rossi</h3>
+                        <p class="text-xs text-slate-400">Especialista en Derecho Corporativo, M&A y Derecho Tributario. 14+ años en derecho de negocios.</p>
+                        <div class="pt-4 border-t border-slate-800/80 flex items-center justify-between text-slate-400 text-sm">
+                            <span class="text-xs text-slate-400"><i class="fa-solid fa-graduation-cap text-gold-custom me-1"></i> MBA & Magíster Tributario</span>
+                            <div class="flex space-x-3">
+                                <a href="#" class="hover:text-gold-custom"><i class="fa-brands fa-linkedin"></i></a>
+                                <a href="#contacto" class="hover:text-gold-custom"><i class="fa-solid fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Abogado 3 -->
+                <div class="card-glass rounded-2xl overflow-hidden border border-slate-800 group">
+                    <div class="h-80 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=800&auto=format&fit=crop" alt="Dra. Sofía Benítez" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-navy-900 via-transparent to-transparent opacity-80"></div>
+                    </div>
+                    <div class="p-6 space-y-3 relative">
+                        <span class="text-xs text-gold-custom font-semibold uppercase tracking-wider">Asociada Senior</span>
+                        <h3 class="text-xl font-bold text-white font-heading">Dra. Sofía Benítez</h3>
+                        <p class="text-xs text-slate-400">Especialista en Derecho de Familia, Sucesiones y Mediaciones Civiles. 12+ años de experiencia.</p>
+                        <div class="pt-4 border-t border-slate-800/80 flex items-center justify-between text-slate-400 text-sm">
+                            <span class="text-xs text-slate-400"><i class="fa-solid fa-graduation-cap text-gold-custom me-1"></i> Especialista en Familia</span>
+                            <div class="flex space-x-3">
+                                <a href="#" class="hover:text-gold-custom"><i class="fa-brands fa-linkedin"></i></a>
+                                <a href="#contacto" class="hover:text-gold-custom"><i class="fa-solid fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIOS -->
+    <section id="testimonios" class="py-24 bg-navy-900 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="text-gold-custom font-semibold text-sm uppercase tracking-widest">Opiniones de Clientes</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-white font-heading">Casos de Éxito y Reseñas</h2>
+                <p class="text-slate-400 text-sm sm:text-base">La confianza de quienes han confiado su tranquilidad y su patrimonio en nuestras manos.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Testimonio 1 -->
+                <div class="card-glass p-8 rounded-2xl border border-slate-800 flex flex-col justify-between space-y-6">
+                    <div class="space-y-4">
+                        <div class="flex text-gold-custom text-sm">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-300 text-sm italic leading-relaxed">
+                            "El Dr. Valdez defendió a nuestra empresa corporativa en un litigio comercial sumamente complejo. Su visión estratégica evitó una pérdida millonaria. Totalmente recomendados por su ética y capacidad profesional."
+                        </p>
+                    </div>
+                    <div class="flex items-center space-x-4 border-t border-slate-800/80 pt-4">
+                        <div class="w-10 h-10 rounded-full bg-slate-700 flex items-center justify-center font-bold text-white text-sm">
+                            RM
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-bold text-white">Roberto Morales</h4>
+                            <p class="text-xs text-slate-400">CEO Grupo Logístico VíaSur</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonio 2 -->
+                <div class="card-glass p-8 rounded-2xl border border-slate-800 flex flex-col justify-between space-y-6">
+                    <div class="space-y-4">
+                        <div class="flex text-gold-custom text-sm">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-300 text-sm italic leading-relaxed">
+                            "Llevé mi divorcio y la liquidación de bienes patrimoniales con la Dra. Sofía Benítez. La calidez humana y la firmeza jurídica con la que llevaron el proceso redujeron el estrés totalmente. Infinitas gracias."
+                        </p>
+                    </div>
+                    <div class="flex items-center space-x-4 border-t border-slate-800/80 pt-4">
+                        <div class="w-10 h-10 rounded-full bg-slate-700 flex items-center justify-center font-bold text-white text-sm">
+                            CP
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-bold text-white">Claudia Paredes</h4>
+                            <p class="text-xs text-slate-400">Cliente Derecho de Familia</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonio 3 -->
+                <div class="card-glass p-8 rounded-2xl border border-slate-800 flex flex-col justify-between space-y-6">
+                    <div class="space-y-4">
+                        <div class="flex text-gold-custom text-sm">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-300 text-sm italic leading-relaxed">
+                            "Atendieron con extrema rapidez un problema laboral de mi empresa. Resolvieron en la etapa extrajudicial ahorrándonos meses de pleito y costos desmedidos. Su nivel de respuesta es de 10 estrellas."
+                        </p>
+                    </div>
+                    <div class="flex items-center space-x-4 border-t border-slate-800/80 pt-4">
+                        <div class="w-10 h-10 rounded-full bg-slate-700 flex items-center justify-center font-bold text-white text-sm">
+                            JA
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-bold text-white">Javier Aranda</h4>
+                            <p class="text-xs text-slate-400">Director Industrial</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACTO Y FORMULARIO DE CITA -->
+    <section id="contacto" class="py-24 bg-navy-950 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12">
+                
+                <!-- Datos de Contacto & Mapa -->
+                <div class="lg:col-span-5 space-y-8">
+                    <div>
+                        <span class="text-gold-custom font-semibold text-sm uppercase tracking-widest">Contacto Directo</span>
+                        <h2 class="text-3xl sm:text-4xl font-bold text-white font-heading mt-2">Agenda una Consulta con Nuestros Especialistas</h2>
+                        <p class="text-slate-400 text-sm mt-3 leading-relaxed">
+                            Estamos preparados para evaluar los detalles de tu caso. Puedes enviarnos un mensaje o visitar nuestras oficinas principales.
+                        </p>
+                    </div>
+
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 rounded-xl bg-gold-custom/10 border border-gold-custom/30 flex items-center justify-center text-gold-custom shrink-0 text-xl">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-sm">Dirección Principal</h4>
+                                <p class="text-slate-400 text-xs mt-1">Av. Javier Prado Este 1245, Piso 12, San Isidro, Lima, Perú</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 rounded-xl bg-gold-custom/10 border border-gold-custom/30 flex items-center justify-center text-gold-custom shrink-0 text-xl">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-sm">Central Telefónica</h4>
+                                <p class="text-slate-400 text-xs mt-1">+51 (01) 456-7890 / +51 987 654 321</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 rounded-xl bg-gold-custom/10 border border-gold-custom/30 flex items-center justify-center text-gold-custom shrink-0 text-xl">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-sm">Correo Electrónico</h4>
+                                <p class="text-slate-400 text-xs mt-1">contacto@valdezabogados.com / citas@valdezabogados.com</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 rounded-xl bg-gold-custom/10 border border-gold-custom/30 flex items-center justify-center text-gold-custom shrink-0 text-xl">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-sm">WhatsApp Urgencias 24/7</h4>
+                                <p class="text-slate-400 text-xs mt-1">+51 987 654 321</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Simulated Map -->
+                    <div class="rounded-2xl border border-slate-800 overflow-hidden bg-navy-900 p-4 text-center space-y-3">
+                        <div class="flex items-center justify-between text-xs text-slate-400 border-b border-slate-800 pb-2">
+                            <span><i class="fa-solid fa-map-pin text-gold-custom mr-1"></i> Oficina Central San Isidro</span>
+                            <span class="text-emerald-400">Estacionamiento disponible</span>
+                        </div>
+                        <div class="h-36 bg-slate-800/50 rounded-xl flex flex-col items-center justify-center text-slate-500 relative overflow-hidden group">
+                            <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?q=80&w=800&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:scale-105 transition-transform">
+                            <div class="relative z-10 text-center px-4">
+                                <i class="fa-solid fa-building-columns text-3xl text-gold-custom mb-2"></i>
+                                <p class="text-xs text-white font-semibold">Torre Financiera & Empresarial - Piso 12</p>
+                                <p class="text-[10px] text-slate-300">Haz clic para abrir navegación en GPS</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formulario de Agendamiento -->
+                <div class="lg:col-span-7">
+                    <div class="card-glass p-8 sm:p-10 rounded-2xl border border-gold-custom/20 shadow-2xl">
+                        <h3 class="text-2xl font-bold text-white font-heading mb-2">Formulario de Reserva de Cita</h3>
+                        <p class="text-xs text-slate-400 mb-8">Completa el formulario y un especialista se comunicará contigo para confirmar la reunión (Presencial o Virtual por Zoom).</p>
+
+                        <form id="appointment-form" onsubmit="handleAppointmentSubmit(event)" class="space-y-6">
+                            <div class="grid sm:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-xs font-semibold uppercase text-slate-300 mb-2">Nombre Completo *</label>
+                                    <input type="text" id="contact-name" required placeholder="Ej. Ana María Silva" class="w-full bg-navy-950 border border-slate-700 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-gold-custom">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold uppercase text-slate-300 mb-2">Teléfono Movil *</label>
+                                    <input type="tel" id="contact-phone" required placeholder="+51 900 000 000" class="w-full bg-navy-950 border border-slate-700 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-gold-custom">
+                                </div>
+                            </div>
+
+                            <div class="grid sm:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-xs font-semibold uppercase text-slate-300 mb-2">Correo Electrónico *</label>
+                                    <input type="email" id="contact-email" required placeholder="correo@ejemplo.com" class="w-full bg-navy-950 border border-slate-700 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-gold-custom">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold uppercase text-slate-300 mb-2">Área Legal Requerida *</label>
+                                    <select id="contact-service" class="w-full bg-navy-950 border border-slate-700 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-gold-custom">
+                                        <option value="penal">Derecho Penal</option>
+                                        <option value="civil">Derecho Civil y Comercial</option>
+                                        <option value="laboral">Derecho Laboral</option>
+                                        <option value="familia">Derecho de Familia</option>
+                                        <option value="corporativo">Derecho Corporativo y Empresa</option>
+                                        <option value="tributario">Asesoría Fiscal y Tributaria</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="grid sm:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-xs font-semibold uppercase text-slate-300 mb-2">Fecha Preferida para Consulta</label>
+                                    <input type="date" required class="w-full bg-navy-950 border border-slate-700 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-gold-custom">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold uppercase text-slate-300 mb-2">Modalidad de Atención</label>
+                                    <select class="w-full bg-navy-950 border border-slate-700 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-gold-custom">
+                                        <option>Reunión Presencial en Oficina</option>
+                                        <option>Videollamada (Zoom / Google Meet)</option>
+                                        <option>Llamada Telefónica Prioritaria</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-semibold uppercase text-slate-300 mb-2">Resumen Breve del Caso</label>
+                                <textarea id="contact-notes" rows="4" placeholder="Describe brevemente la situación o consulta para asignar al abogado especialista adecuado..." class="w-full bg-navy-950 border border-slate-700 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-gold-custom"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full gold-bg-gradient text-navy-950 font-bold py-4 rounded-xl shadow-xl hover:opacity-95 transition-opacity text-base">
+                                <i class="fa-solid fa-paper-plane mr-2"></i> Confirmar Solicitud de Cita
+                            </button>
+                            
+                            <p class="text-[11px] text-center text-slate-500">
+                                Al hacer clic en enviar aceptas nuestras políticas de privacidad y protección de datos.
+                            </p>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-navy-950 border-t border-slate-800 text-slate-400 text-xs py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+                
+                <!-- Columna 1: Brand -->
+                <div class="lg:col-span-2 space-y-4">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-8 h-8 rounded border border-gold-custom flex items-center justify-center bg-navy-800 text-gold-custom">
+                            <i class="fa-solid fa-scale-balanced text-base"></i>
+                        </div>
+                        <span class="font-serif text-xl font-bold tracking-tight text-white">VALDEZ <span class="text-gold-custom">&</span> ASOCIADOS</span>
+                    </div>
+                    <p class="text-slate-400 text-xs leading-relaxed max-w-sm">
+                        Estudio Jurídico de referencia institucional con alto rigor procesal. Soluciones oportunas e integrales ante cualquier controversia legal.
+                    </p>
+                    <div class="flex space-x-3 pt-2">
+                        <a href="#" class="w-8 h-8 rounded-full bg-navy-800 hover:bg-gold-custom hover:text-navy-950 flex items-center justify-center transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="w-8 h-8 rounded-full bg-navy-800 hover:bg-gold-custom hover:text-navy-950 flex items-center justify-center transition-colors"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" class="w-8 h-8 rounded-full bg-navy-800 hover:bg-gold-custom hover:text-navy-950 flex items-center justify-center transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="w-8 h-8 rounded-full bg-navy-800 hover:bg-gold-custom hover:text-navy-950 flex items-center justify-center transition-colors"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <!-- Columna 2: Enlaces Rápidos -->
+                <div class="space-y-3">
+                    <h4 class="text-white font-bold text-sm uppercase tracking-wider">Enlaces Rápidos</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#inicio" class="hover:text-gold-custom transition-colors">Inicio</a></li>
+                        <li><a href="#nosotros" class="hover:text-gold-custom transition-colors">Sobre el Bufete</a></li>
+                        <li><a href="#servicios" class="hover:text-gold-custom transition-colors">Especialidades</a></li>
+                        <li><a href="#cotizador" class="hover:text-gold-custom transition-colors">Cotizador</a></li>
+                        <li><a href="#equipo" class="hover:text-gold-custom transition-colors">Nuestros Abogados</a></li>
+                    </ul>
+                </div>
+
+                <!-- Columna 3: Especialidades -->
+                <div class="space-y-3">
+                    <h4 class="text-white font-bold text-sm uppercase tracking-wider">Áreas Legales</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#servicios" class="hover:text-gold-custom transition-colors">Defensa Penal</a></li>
+                        <li><a href="#servicios" class="hover:text-gold-custom transition-colors">Derecho Civil</a></li>
+                        <li><a href="#servicios" class="hover:text-gold-custom transition-colors">Asesoría Laboral</a></li>
+                        <li><a href="#servicios" class="hover:text-gold-custom transition-colors">Divorcios & Familia</a></li>
+                        <li><a href="#servicios" class="hover:text-gold-custom transition-colors">Derecho Corporativo</a></li>
+                    </ul>
+                </div>
+
+                <!-- Columna 4: Legal & Confidencialidad -->
+                <div class="space-y-3">
+                    <h4 class="text-white font-bold text-sm uppercase tracking-wider">Aviso Legal</h4>
+                    <p class="text-[11px] text-slate-500 leading-relaxed">
+                        La información provista en esta plataforma web no constituye asesoría legal formal ni reemplaza una consulta directa con un abogado colegiado.
+                    </p>
+                    <ul class="space-y-1 text-[11px]">
+                        <li><a href="#" class="hover:underline">Políticas de Privacidad</a></li>
+                        <li><a href="#" class="hover:underline">Términos de Servicio</a></li>
+                        <li><a href="#" class="hover:underline">Libro de Reclamaciones</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="border-t border-slate-800/80 pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500">
+                <p>&copy; 2026 Valdez & Asociados Estudio Jurídico. Todos los derechos reservados.</p>
+                <p class="mt-2 sm:mt-0">Diseñado con distinción & sofisticación jurídica.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODAL DE DETALLE DE SERVICIO -->
+    <div id="service-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-navy-950/80 backdrop-blur-md">
+        <div class="card-glass bg-navy-900 max-w-2xl w-full rounded-2xl border border-gold-custom/30 p-6 sm:p-8 relative shadow-2xl space-y-6">
+            <button onclick="closeServiceModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white text-xl">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="flex items-center space-x-4">
+                <div id="modal-icon" class="w-14 h-14 rounded-xl bg-gold-custom/10 border border-gold-custom/30 flex items-center justify-center text-gold-custom text-2xl">
+                    <i class="fa-solid fa-gavel"></i>
+                </div>
+                <div>
+                    <span class="text-xs text-gold-custom font-semibold uppercase tracking-wider">Especialidad Legal</span>
+                    <h3 id="modal-title" class="text-2xl font-bold text-white font-heading">Derecho Penal</h3>
+                </div>
+            </div>
+
+            <p id="modal-description" class="text-slate-300 text-sm leading-relaxed">
+                Descripción del servicio...
+            </p>
+
+            <div class="space-y-3 border-t border-slate-800 pt-4">
+                <h4 class="text-xs font-bold text-white uppercase tracking-wider">Servicios Incluidos en esta Área:</h4>
+                <ul id="modal-features" class="grid sm:grid-cols-2 gap-2 text-xs text-slate-300">
+                    <!-- Dinámico -->
+                </ul>
+            </div>
+
+            <div class="pt-4 border-t border-slate-800 flex flex-col sm:flex-row gap-3">
+                <a href="#contacto" onclick="closeServiceModal()" class="w-full text-center gold-bg-gradient text-navy-950 font-bold py-3 rounded-lg text-sm">
+                    Solicitar Consulta sobre este Tema
+                </a>
+                <button onclick="closeServiceModal()" class="w-full sm:w-auto px-6 py-3 bg-navy-800 text-slate-300 hover:text-white rounded-lg text-sm font-semibold">
+                    Cerrar
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- TOAST NOTIFICATION -->
+    <div id="toast" class="fixed bottom-6 right-6 z-50 hidden bg-navy-800 border border-gold-custom/50 text-white px-6 py-4 rounded-xl shadow-2xl flex items-center space-x-3">
+        <i class="fa-solid fa-circle-check text-gold-custom text-xl"></i>
+        <span id="toast-message" class="text-sm font-medium">Mensaje enviado</span>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // Data para Modales de Servicios
+        const serviceData = {
+            penal: {
+                title: "Derecho Penal & Defensa procesal",
+                icon: "fa-gavel",
+                desc: "Brindamos patrocinio y defensa técnica en todo tipo de procesos penales, querellas, investigación preparatoria, habeas corpus y prevención de delitos corporativos (Compliance Penal). Atendemos emergencias de detención las 24 horas del día.",
+                features: [
+                    "✓ Asistencia legal inmediata en comisarías",
+                    "✓ Defensa en delitos económicos y estafas",
+                    "✓ Libertad procesal y apelaciones",
+                    "✓ Compliance y responsabilidad penal corporativa"
+                ]
+            },
+            civil: {
+                title: "Derecho Civil, Contratos & Propiedades",
+                icon: "fa-file-contract",
+                desc: "Protegemos tus activos e intereses patrimoniales. Elaboración y revisión rigurosa de contratos complejos, saneamiento de inmuebles, juicios de desalojo, indemnizaciones por daños e interdictos.",
+                features: [
+                    "✓ Saneamiento e inscripción de inmuebles",
+                    "✓ Cobranza judicial y ejecución de garantías",
+                    "✓ Redacción de contratos comerciales y civiles",
+                    "✓ Sucesiones e higienes testamentarias"
+                ]
+            },
+            laboral: {
+                title: "Derecho Laboral & Relaciones de Trabajo",
+                icon: "fa-briefcase",
+                desc: "Defendemos tanto los derechos del trabajador ante despidos arbitrarios e impago de beneficios, como a empresas en el diseño de su estructura laboral, reglamentos internos e inspecciones laborales de la autoridad del trabajo.",
+                features: [
+                    "✓ Demandas por despido e indemnizaciones",
+                    "✓ Auditorías laborales y contratos de trabajo",
+                    "✓ Defensa ante inspecciones de SUNAFIL",
+                    "✓ Negociaciones colectivas"
+                ]
+            },
+            familia: {
+                title: "Derecho de Familia, Divorcios & Custodia",
+                icon: "fa-people-roof",
+                desc: "Abordamos controversias familiares con sensibilidad, reserva y estricta eficacia legal. Especializados en procesos de divorcio rápido, liquidación de sociedad de gananciales, custodia de menores y pensiones de alimentos.",
+                features: [
+                    "✓ Divorcio notarial, municipal o judicial",
+                    "✓ Régimen de alimentos y visitas",
+                    "✓ Tenencia de menores y filiación",
+                    "✓ Repartición equitativa de bienes"
+                ]
+            },
+            corporativo: {
+                title: "Derecho Corporativo & Empresa",
+                icon: "fa-building-shield",
+                desc: "Acompañamos a emprendedores y corporaciones en la constitución, estructuración e internacionalización de sus negocios. Gobernanza corporativa, acuerdos de accionistas, reorganizaciones societarias y due diligence.",
+                features: [
+                    "✓ Constitución rápida de empresas",
+                    "✓ Pactos de socios y accionistas",
+                    "✓ Fusiones, adquisiciones y escisiones",
+                    "✓ Registro de marcas y propiedad intelectual"
+                ]
+            },
+            tributario: {
+                title: "Asesoría Fiscal y Tributaria",
+                icon: "fa-receipt",
+                desc: "Diseñamos estrategias de planificación tributaria legal que optimizan la carga fiscal de tu empresa dentro del marco procesal. Defensa contenciosa y no contenciosa frente a entes fiscalizadores tributarios.",
+                features: [
+                    "✓ Planificación tributaria anual",
+                    "✓ Reclamaciones y apelaciones fiscales",
+                    "✓ Asesoría en auditorías de la administración",
+                    "✓ Devoluciones e impuestos de aduana"
+                ]
+            }
+        };
+
+        // Abrir Modal de Servicio
+        function openServiceModal(serviceKey) {
+            const data = serviceData[serviceKey];
+            if (!data) return;
+
+            document.getElementById('modal-title').innerText = data.title;
+            document.getElementById('modal-description').innerText = data.desc;
+            document.getElementById('modal-icon').innerHTML = `<i class="fa-solid ${data.icon}"></i>`;
+
+            const featuresContainer = document.getElementById('modal-features');
+            featuresContainer.innerHTML = data.features.map(f => `<li class="bg-navy-950 p-2 rounded border border-slate-800">${f}</li>`).join('');
+
+            const modal = document.getElementById('service-modal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        // Cerrar Modal de Servicio
+        function closeServiceModal() {
+            const modal = document.getElementById('service-modal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
+        // Calculadora de Honorarios
+        function calculateFee() {
+            const areaBase = parseFloat(document.getElementById('calc-area').value) || 400;
+            const complexityMult = parseFloat(document.querySelector('input[name="complexity"]:checked').value) || 1;
+            const urgencyMult = parseFloat(document.getElementById('calc-urgency').value) || 1;
+
+            const total = Math.round(areaBase * complexityMult * urgencyMult);
+            document.getElementById('calculated-price').innerText = `$${total} USD`;
+        }
+
+        // Prefill contact form from calculator
+        function prefillContactForm() {
+            const areaSelect = document.getElementById('calc-area');
+            const selectedOptionText = areaSelect.options[areaSelect.selectedIndex].text;
+            const price = document.getElementById('calculated-price').innerText;
+            
+            document.getElementById('contact-notes').value = `Solicitud de presupuesto cotizado previamente en la calculadora para ${selectedOptionText} por un estimado de ${price}.`;
+        }
+
+        // Manejo de Formulario de Cita
+        function handleAppointmentSubmit(e) {
+            e.preventDefault();
+            const name = document.getElementById('contact-name').value;
+            showToast(`¡Gracias ${name}! Tu solicitud de cita ha sido registrada. Te contactaremos en breve.`);
+            e.target.reset();
+        }
+
+        // Mostrar Toast
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toast-message').innerText = message;
+            toast.classList.remove('hidden');
+            setTimeout(() => {
+                toast.classList.add('hidden');
+            }, 4500);
+        }
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on link click
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Close modal on outside click
+        window.onclick = function(event) {
+            const modal = document.getElementById('service-modal');
+            if (event.target === modal) {
+                closeServiceModal();
+            }
+        }
+    </script>
+</body>
+</html>
